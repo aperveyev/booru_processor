@@ -8,7 +8,9 @@ and local use https://www.reddit.com/r/MachineLearning/comments/akbc11/p_tag_est
 At a time my tasks are:
 - to develop image set segmentation methods and tools
 - to analyze high level character (so - copyrights) tags usage
+
 with strategic goal to create a usable tool (including model) for:
 - general image composition classification
 - anime characters recognition
 - image attractiveness (visual quality) prediction
+
