@@ -22,7 +22,26 @@ Easy Duplicate>> move to target_dir_2FILEDUPS
 3) Диспропорциональные или маленькие файлы согласно информации об исходном размере - это еще надо перепроверить !
 поэтому сначала надо выполнить перенос файлов по списку имен с сохранением структуры папок чтобы легко было вернуть взад
 
+SQL>>txt
+select id --, image_width, image_height, file_ext, file_size -- 12.119
+from BOORU_DANB18 t 
+where flags='F' and ( image_width<256 or image_height<256 or image_width*image_height < 512*256 )
+order by mod(id,1000), id
+SQL>>txt
+select id --, image_width, image_height, file_ext, file_size -- 11.953
+from BOORU_DANB18 t 
+where flags='F' and image_height>0 and image_width>0 and ( image_width/image_height > 4 or image_height/image_width > 4 )
+order by mod(id,1000), id
 
+BAT>>
+for /d %%d in (*) do (
+cd %%d
+FOR /F "USEBACKQ TOKENS=*" %%F IN ("..\_move_lst_dir.lst") DO (
+md e:\target_dir_lst\%%d
+MOVE "%%~F" e:\target_dir_lst\%%d\
+)
+cd ..
+)
 
 4) Крайне близкие подобия или дубликаты изображений 
 
