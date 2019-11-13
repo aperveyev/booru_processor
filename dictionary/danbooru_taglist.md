@@ -12,3 +12,18 @@
 - MAL_ID код персонажа https://myanimelist.net/character/9909 или произведения https://myanimelist.net/anime/9874
 - MAL_NAME имя сущности на myanimelist
 - MAL_CNT количество фаворитов на myanimelist, дает представление о популярности сущности
+
+#### SQL create table (Oracle syntax)
+
+create table danbooru_taglist (
+TAG_CAT number(1) not null,
+TAG_ID number(7) not null,
+TAG_NAME varchar2(400) not null,
+TAG_CNT number(6) not null,
+FR_ID number(7),
+MAL_ID number(6),
+MAL_NAME varchar2(400) not null,
+MAL_CNT number(6)
+)
+
+
