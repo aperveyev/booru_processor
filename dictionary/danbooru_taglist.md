@@ -1,6 +1,6 @@
 ### Набор данных: теги Danbooru vs сущности Myanimelist (CSV ;)
 
-Содержит теги https://danbooru.donmai.us/ **NSFW !!!** типов Copyrights (3) и Characters (4) встречающиеся 5 и более раз
+Содержит теги https://danbooru.donmai.us/ (NSFW !!!) типов Copyrights (3) и Characters (4) встречающиеся 5 и более раз
 в датасете Danbooru2018, сгруппированные и совмещенные с anime и character сущностями https://myanimelist.net/
 
 - TAG_CAT категория тега 3 = Copyrights (произведения, студии, торговые марки и что попало) 4 = Characters (персонажи)
