@@ -1,0 +1,13 @@
+### Набор данных: теги Danbooru vs сущности Myanimelist (CSV ;)
+
+Содержит теги https://danbooru.donmai.us/ **NSFW !!!** типов Copyrights (3) и Characters (4) встречающиеся 5 и более раз
+в датасете Danbooru2018, сгруппированные и совмещенные с anime и character сущностями https://myanimelist.net/
+
+- TAG_CAT категория тега 3 = Copyrights (произведения, студии, торговые марки и что попало) 4 = Characters (персонажи)
+- TAG_ID внутренний номер тега в Danbooru, удобен как уникальный связующий ключ 
+- TAG_NAME собственно текстовый тег https://danbooru.donmai.us/posts?tags=**patchouli_knowledge**
+- TAG_CNT количество использований в Danbooru2018, дает представление о популярности тега
+- FR_ID
+- MAL_ID
+- MAL_NAME
+- MAL_CNT количество фаворитов на myanimelist, дает представление о популярности сущности
