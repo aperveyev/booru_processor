@@ -1,4 +1,4 @@
-## BOORU-CHARS OPEN DATASET:
+## BOORU-CHARS OPEN DATASET (english description below):
 - открытый набор данных о качественных арт-изображениях персонажей аниме, игр, мультипликации и т.п.
 - состоит из мета-данных (ссылок на booru-первоисточник, смысловых тегов, статистических показателей,
   результатов применения алгоритмов на изображениях) и thumbnail-изображений 512x512px (дополнены черными полями)
@@ -38,20 +38,22 @@
 - ImageMagick https://imagemagick.org/script/download.php
 - Python (3.8) https://www.python.org/
 
-**ДАТАСЕТЫ:**
+**ДАТАСЕТЫ, СЕРВИСЫ И МОДЕЛИ:**
+- фундаментальные статьи с кучей полезных ссылок https://www.gwern.net/Danbooru2018 и https://www.gwern.net/TWDNE
+- сервис: попытка определить теги для произвольной картинки http://kanotype.iptime.org:8003/deepdanbooru/
+- сервис: первоисточник хайпа и мой вдохновитель https://www.thiswaifudoesnotexist.net/
+- torrent с "иконками" и метаданными danbooru https://nyaa.si/view/1176129 (перераздача Danbooru2018 в гуманном формате)
+- полезная всячина с Kaggle (списком) https://www.kaggle.com/datasets?search=anime меня особо заинтересовало 
+  все связанное с MyAnimeList и Safebooru
 
+### ENGLISH: datasets and software for Booru (painted or CG characters, mostly anime style) image processing
 
-### OBSOLETE ENGLISH DESCRIPTION: code and texts for Booru (anime style) image processing
+Here is a hobbie project inspired by results of https://www.thiswaifudoesnotexist.net/ and it's technical background - https://www.gwern.net/TWDNE and dataset https://www.gwern.net/Danbooru2018 , algorithms and software available for free use.
 
-Inspired by dataset : https://www.gwern.net/Danbooru2018
-which can be used for creation of trained models for services like http://kanotype.iptime.org:8003/deepdanbooru/
-and local use https://www.reddit.com/r/MachineLearning/comments/akbc11/p_tag_estimation_for_animestyle_girl_image/
-
-At a time my tasks are:
-- to develop image set segmentation methods and tools
-- to analyze high level character (so - copyrights) tags usage
-
-with strategic goal to create a usable tool (including model) for:
-- general image composition classification
-- anime characters recognition
-- image attractiveness (visual quality) prediction
+This activity goals are:
+- to arrange available metadata, software, scripts and models for the subject
+- to collect (and create) training image datasets ("thumbnails") with good quality and metadata background
+- an attempt to build usable tools for imagesets & metadata analysis and processing, e.g.
+  - scene composition classification
+  - visual attractiveness estimation
+  - auto correction ?
