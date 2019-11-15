@@ -5,12 +5,15 @@
 
 #### Смысл статистических характеристик изображения, рассчитываемых Imagick и их получение
 
-Способ получения **magick identify -format "маска_текста" входной_файл >> выходной_файл** В BAT-файлах символ "процент" должен быть удвоен.
+Способ получения **magick identify -format "форматная_маска" входной_файл >> выходной_файл** или
+**magick convert входной_файл ВСЯКИЕ_ПРЕОБРАЗОВАНИЯ -format "форматная_маска" info: >> выходной_файл**
+
+В BAT-файлах символ "процент" должен быть удвоен.
 
 **Основные характеристики (по заголовку файла, не ресурсоемкие):**
 - %f - имя файла
 - %d - путь к файлу
-- %B - размер в байтах (чувствительны к регистру !)
+- %B - размер в байтах (ключи чувствительны к регистру !)
 - %[width] - ширина в точках (квадратные скобки !)
 - %[height] - высота в точках 
 - %[bit-depth] - глубина цвета
@@ -23,28 +26,20 @@
 - %r - цветовое пространство
 - %# - инфо-хеш изображения, потенциальный уникальный ключ, для поиска подобий непригоден
 
-**Расчетные характеристики, ресурсоемкие для крупных изображений:**
-- %@ - bound_box в формате WIDTHxHEIGHT+X+Y для "чистой" (без блюра) обрезки
+**Расчетные характеристики (ресурсоемкие для крупных изображений):**
+- %@ - bound_box в формате WIDTHxHEIGHT+X+Y для "чистого" (без блюра) trim
+- %k - количество цветов
+- %[entropy] - энтропия, показатель доли однородного фона
+- %[skewness] - показатель "темноты" изображения
+- %[fx:mean] - среднее по гистограмме цветов "в целом" или по цветовому каналу
+- %[fx:standard_deviation] - стандартное отклонение по гистограмме цветов "в целом" или по цветовому каналу
+- %[fx:maxima] - максимум по гистограмме цветов "в целом" или по цветовому каналу
 
-[tentr];[tskew];[tmean];[tstddev];[tcolors];[meanG];[maximaG];[Rmean];[Gmean];[Bmean];[edge];[width2];[height2];[entr2] > A:\#LOAD_IM\0000.csv
+#### Типичные преобразования с помощью magick convert (+ цепочки операций !)
+- magick convert входной_файл **-colorspace HCL** - преобразование цветового пространства
+- magick convert входной_файл **-channel red** - выделение канала
+- magick convert входной_файл **-edge ЧИСЛО** - детектирование границ (число - толщина)
+- magick convert входной_файл **-fuzz ЧИСЛО%** - размытие
+- **-trim +repage** - обрезка и приведение канваса к новому размеру
 
-
-for /R D:\#RESB\2x3 %%J in (*.JPG) do call A:\#LOAD_IM\0000_loop.bat "%%J" "A:\#LOAD_IM\D_#RESB_2x3\%%~nJ.jpg"
-
-del A:\#LOAD_IM\_.jpg
-
-magick identify -format """%%f"";%%d;%%B;%%[width];%%[height];%%[bit-depth];%%x;%%y;%%U;%%@;%%m;%%Q;%%C;%%r;%%#;" %1 >> A:\#LOAD_IM\0000.csv
-magick convert -resize 512x512 -extent 512x512 -gravity center -background black %1 %2
-magick convert %2 -fuzz 3%% -trim +repage A:\#LOAD_IM\_.jpg
-magick identify -format "%%B;%%[width];%%[height];%%[entropy];%%[skewness];%%[fx:mean];%%[fx:standard_deviation];%%k;" A:\#LOAD_IM\_.jpg >> A:\#LOAD_IM\0000.csv
-magick convert A:\#LOAD_IM\_.jpg -colorspace HCL -format "%%[fx:mean.g];%%[fx:maxima.g];" info: >> A:\#LOAD_IM\0000.csv
-magick convert A:\#LOAD_IM\_.jpg -channel   red -format "%%[fx:mean];" info: >> A:\#LOAD_IM\0000.csv
-magick convert A:\#LOAD_IM\_.jpg -channel green -format "%%[fx:mean];" info: >> A:\#LOAD_IM\0000.csv
-magick convert A:\#LOAD_IM\_.jpg -channel  blue -format "%%[fx:mean];" info: >> A:\#LOAD_IM\0000.csv
-magick convert A:\#LOAD_IM\_.jpg -edge 2 -format "%%[fx:mean];" info: >> A:\#LOAD_IM\0000.csv
-magick convert A:\#LOAD_IM\_.jpg -fuzz 15%% -trim +repage A:\#LOAD_IM\_.jpg
-magick identify -format "%%[width];%%[height];%%[entropy]\n" A:\#LOAD_IM\_.jpg >> A:\#LOAD_IM\0000.csv
-
-
-#### Типичные преобразования с помощью Imagick
 
