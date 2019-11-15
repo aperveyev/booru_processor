@@ -1,0 +1,72 @@
+Предварительная очистка входного набора - методы, средства и результаты.
+
+source_dir - папка с папками 0000-0999 в которых находятся изображения
+target_dir_N - папка где будут храниться изображения, отброшенные шагом очистки N (без внутренней структуры)
+
+1) Малоинформативные файлы и артефакты компрессии
+
+Компрессия JPG и значительное уменьшение размера изображения (512 по длинной стороне) могли привести к потере 
+практически всей информации в изображении (очень вытянутое, скетч из тонких линий) индикатором чего является малый размер JPG.
+Также - предположительно из за артефактов компрессии - изредка встречаются аномально большие JPG (визуально нормальные).
+Опытным путем установлено что можно считать аномальными (порядка 0.1% от количества) файлы до 12000 байт и свыше 500000 байт.
+
+BAT>> for /r source_dir %%F in (*) do @if %%~zF leq 12000 move "%%F" target_dir_1SMALL
+BAT>> for /r source_dir %%F in (*) do @if %%~zF geq 500000 move "%%F" target_dir_1BIG
+
+"Большие" файлы скорее всего будут, после анализа, возвращены в основной набор.
+
+2) Точные файловые дубликаты.
+
+Как ни странно, входной набор не очищен от точных дублей.
+
+Easy Duplicate>> move to target_dir_2FILEDUPS
+
+3) Диспропорциональные или маленькие файлы согласно информации об исходном размере - это еще надо перепроверить !
+Поэтому надо выполнить перенос файлов по списку имен с сохранением структуры папок чтобы легко было вернуть взад.
+
+SQL>>txt -- 12.119 не учитывает отсев на предыдущих шагах
+select id --, image_width, image_height, file_ext, file_size -- 12.119
+from BOORU_DANB18 t 
+where flags='F' and ( image_width<256 or image_height<256 or image_width*image_height < 512*256 )
+order by mod(id,1000), id
+SQL>>txt -- 11.953
+select id --, image_width, image_height, file_ext, file_size -- 11.953
+from BOORU_DANB18 t 
+where flags='F' and image_height>0 and image_width>0 and ( image_width/image_height > 4 or image_height/image_width > 4 )
+order by mod(id,1000), id
+
+BAT>>
+for /d %%d in (*) do (
+cd %%d
+FOR /F "USEBACKQ TOKENS=*" %%F IN ("..\_move_lst_dir.lst") DO (
+md e:\target_dir_lst\%%d
+MOVE "%%~F" e:\target_dir_lst\%%d\
+)
+cd ..
+)
+
+4) Для дальнейшего анализа выполнена обрезка фона (как внесенного при создании датасета, так и присущего изображению).
+ОНА ОЧЕНЬ РЕСУРСОЕМКАЯ, СЕЙЧАС ГЛЮЧИТ скорее всего из-за "аномальных" изображений (надеюсь, попустит)
+
+BAT root>>
+echo [file];[BPP];[width];[height];[entr];[colors];[meanG] > _@@.csv
+for /d %%d in (099?) do (
+cd %%d
+for %%x in (*.jpg) do call ..\_@@_loop.bat "%%x" ..\_@@.csv
+cd ..
+)
+BAT cycle>>
+magick identify -format """%%f"";" %1 >> %2
+magick convert %1 -trim +repage _.jpg
+magick identify -format "%%[fx:%~z1/w/h];%%[width];%%[height];%%[entropy];%%k;" _.jpg >> %2
+magick convert _.jpg -colorspace HCL -format "%%[fx:mean.g]\n" info: >> %2
+del _.jpg
+
+!!! есть новый вариает с управляемым целевым диском и -fuzz 3%% -trim
+
+Диспропорциональные или маленькие файлы согласно информации об уменьшенном изображении с обрезанным фоном
+
+5) Крайне близкие подобия или дубликаты изображений
+Не совсем понятно как сохраться "отброшенные копии" ? recycle bin -> rename -> recover ?
+
+AntiDupl.NET>> similarity <= 0.04%
