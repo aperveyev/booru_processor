@@ -16,9 +16,5 @@ for i in range(2720000, 2720020):
 		time.sleep(1)
 		pass
 
-#"height":1000,"width":707
-#"change":1576483240,
-#"score":0,
-#"tags":"1girl bangs black_eyes black_legwear black_panties blush breasts clenched_teeth 
-
+# the very same method for Konachan
 # https://konachan.com/post.json?tags=id:248816
