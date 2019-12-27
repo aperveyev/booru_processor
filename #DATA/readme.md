@@ -2,7 +2,7 @@
 
 Ну как, небольшие, что Git позволяет то и размещается. Основные наборы данных распространяются через torrent. 
 
-* **danbooru_taglist** - теги Danbooru и соответствующие сущности Myanimelist
+* **danbooru_taglist** - теги Danbooru и соответствующие сущности Myanimelist, подробности в https://github.com/aperveyev/booru_processor/blob/master/%23DATA/danbooru_taglist.md
 * **V201?.7z** - набор CSV файлов со статистическими характеристиками картинок из релиза 2019 года 
 
 ### Каталог torrent релизов
