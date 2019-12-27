@@ -1,4 +1,4 @@
-## BOORU-CHARS OPEN DATASET (english description below):
+## BOORU-CHARS OPEN DATASET (english description https://github.com/aperveyev/booru_processor/blob/master/README_EN.md ):
 - открытый набор данных о качественных арт-изображениях персонажей аниме, игр, мультипликации и т.п.
 - состоит из мета-данных (ссылок на booru-первоисточник, смысловых тегов, статистических показателей,
   результатов применения алгоритмов на изображениях) и thumbnail-изображений 512x512px (дополнены черными полями)
@@ -49,15 +49,3 @@
 - полезная всячина с Kaggle (списком) https://www.kaggle.com/datasets?search=anime меня особо заинтересовали метаданные 
   MyAnimeList и Safebooru
 - torrent-ы с "иконками" и метаданными, описание https://github.com/aperveyev/booru_processor/blob/master/%23DATA/readme.md  
-
-### ENGLISH: datasets and software for Booru (painted or CG characters, mostly anime style) image processing
-
-Here is a hobbie project inspired by results of https://www.thiswaifudoesnotexist.net/ and it's technical background - https://www.gwern.net/TWDNE and dataset https://www.gwern.net/Danbooru2018 , algorithms and software available for free use.
-
-This activity goals are:
-- to arrange available metadata, software, scripts and models for the subject
-- to collect (and create) training image datasets ("thumbnails") with good quality and metadata background
-- an attempt to build usable tools for imagesets & metadata analysis and processing, e.g.
-  - scene composition classification
-  - visual attractiveness estimation
-  - auto correction ?
