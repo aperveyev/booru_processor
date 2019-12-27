@@ -1,4 +1,4 @@
-## BOORU-CHARS OPEN DATASET (english description https://github.com/aperveyev/booru_processor/blob/master/README_EN.md ):
+## BOORU-CHARS OPEN DATASET (english description [here](https://github.com/aperveyev/booru_processor/blob/master/README_EN.md)  ):
 - открытый набор данных о качественных арт-изображениях персонажей аниме, игр, мультипликации и т.п.
 - состоит из мета-данных (ссылок на booru-первоисточник, смысловых тегов, статистических показателей,
   результатов применения алгоритмов на изображениях) и thumbnail-изображений 512x512px (дополнены черными полями)
