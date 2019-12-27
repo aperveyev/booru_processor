@@ -15,7 +15,7 @@
   - самые многочисленные (в разрезе по авторам) серии для заданной комбинации тегов
   - неисчислимое множество примеров "хит-парадов", на основе которых можно отбирать для просмотра и/или качать подборки
 - быть основой для применения Machine Learning & Neural Networks алгоритмов к не-фотографическим изображениям (их "иконкам"), например
-  - обнаружение ключевых объектов в рисованных изображениях (с лицами у nagadomi https://github.com/nagadomi/lbpcascade_animeface очень хорошо получилось). Хотелось бы получить нечто подобное для ростовых гуманоидных фигур и груди (сисек).
+  - обнаружение ключевых объектов в рисованных изображениях (с лицами у [nagadomi](https://github.com/nagadomi/lbpcascade_animeface) очень хорошо получилось). Хотелось бы получить нечто подобное для ростовых гуманоидных фигур и груди (сисек).
   - сегментирование изображений по композиции и масштабу на основе относительного размера и положения детектированных лиц (и дгугих ключевых объектов)
   - разработка "весовой функции визуального качества", пригодной для создания априорных "хит-парадов", а также (хотя бы частичной) автоматизации разгребания безбрежного арт-океана 
 
@@ -34,13 +34,13 @@
 Ряд ресурсов не упомянут потому что "не проходят по конкурсу", не так велики, уже закрылись или не совсем по теме.
 
 **ВНЕШНИЕ ПРОГРАММЫ (под Windows):**
-- скачивание **Grabber** https://github.com/Bionus/imgbrd-grabber
-- разбивка по пропорциям **Dimensions2Folders** https://www.dcmembers.com/skwire/download/dimensions-2-folders/
-- просмотр и простые преобразования **Fast stone image viewer** https://www.faststone.org/FSViewerDetail.htm
-- дедубликация **AntiDupl.NET** https://github.com/ermig1979/AntiDupl
-- каталогизация метаданных **ExifTool** https://www.sno.phy.queensu.ca/~phil/exiftool/
-- преобразования, в т.ч. весьма нетривиальные **ImageMagick** https://imagemagick.org/script/download.php
-- скриптовый "клей" с кучей готовых библиотек **Python 3.8** https://www.python.org/
+- скачивание [Grabber](https://github.com/Bionus/imgbrd-grabber)
+- разбивка по пропорциям [Dimensions2Folders](https://www.dcmembers.com/skwire/download/dimensions-2-folders/)
+- просмотр и простые преобразования [Fast stone image viewer](https://www.faststone.org/FSViewerDetail.htm)
+- дедубликация [AntiDupl.NET](https://github.com/ermig1979/AntiDupl)
+- каталогизация метаданных [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/)
+- преобразования, в т.ч. весьма нетривиальные [ImageMagick](https://imagemagick.org/script/download.php)
+- скриптовый "клей" с кучей готовых библиотек [Python 3.8](https://www.python.org/)
 
 **ДАТАСЕТЫ, СЕРВИСЫ И МОДЕЛИ:**
 - фундаментальные статьи с массой полезных ссылок https://www.gwern.net/Danbooru2018 и https://www.gwern.net/TWDNE
