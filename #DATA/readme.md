@@ -2,8 +2,10 @@
 
 Ну как, небольшие, что Git позволяет то и размещается. Основные наборы данных распространяются через torrent. 
 
-* **danbooru_taglist_201911** - теги Danbooru и соответствующие сущности Myanimelist, [подробности здесь](https://github.com/aperveyev/booru_processor/blob/master/%23DATA/danbooru_taglist.md)
-* **V201??** - набор CSV файлов со статистическими характеристиками картинок из релиза 2019 года 
+* **danbooru_taglist_201911** - теги Danbooru и соответствующие сущности Myanimelist,
+[подробности здесь](https://github.com/aperveyev/booru_processor/blob/master/%23DATA/danbooru_taglist.md)
+* **V201??** - набор CSV файлов со статистическими характеристиками картинок из релиза 2019 года,
+[подробности здесь](https://github.com/aperveyev/booru_processor/blob/master/imagemagick/readme.md)
 * **SB_TAGS_201911** - полный перечень тегов копирайты/персонажи/авторы для Safebooru, вошедших в релиз-2019 (для прочих источников копирайты/персонажи/авторы по возможности извлечены из имен файлов)
 
 ### Каталог torrent релизов
