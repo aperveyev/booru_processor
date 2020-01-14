@@ -33,21 +33,21 @@ It covers 1.227.622 thumbnail (512x512px images) from several imageboards combin
   * anime-pictures.net
   * danbooru.donmai.us
   * tbib.org
-- image file names mostly structured and contains %website% - %id% - %copyright% ~ %charachers% (%artist%)
+- image file names mostly structured and contains **%website% - %id% - %copyright% ~ %charachers% (%artist%)**
 - not completely SFW (some softcore ecchi here and there)
 
 Image dates covers 10.2016 - 08.2019 densely, earlier period selectively:
-V2019  - 11.2018-08.2019  from rip https://nyaa.si/view/1202653
-V2018  - period 2017-2018 from rips https://nyaa.si/view/1181364
+- V2019  - 11.2018-08.2019  from rip https://nyaa.si/view/1202653
+- V2018  - period 2017-2018 from rips https://nyaa.si/view/1181364
                                     https://www.acgnx.se/show-cceb3260269b5423cbd7f8d59f2c84531750923b.html
                                     https://nyaa.si/view/771715 and https://nyaa.si/view/513582
                                     https://rutracker.org/forum/viewtopic.php?t=5478026
-V2016  - till 10.2016 https://nyaa.si/view/891391
+- V2016  - till 10.2016 https://nyaa.si/view/891391
          partially https://nyaa.si/view/750972 and https://nyaa.si/view/875411
-V2016W - till 05.2016 converted to wallpapes sizes
+- V2016W - till 05.2016 converted to wallpapes sizes
          https://nyaa.si/view/710893, https://nyaa.si/view/745633
          https://rutracker.org/forum/viewtopic.php?t=5198985
-V2018D - remainder from https://nyaa.si/view/1176129 survived after cleanup and deduplication, mostly 2015 and earlier
+- V2018D - remainder from https://nyaa.si/view/1176129 survived after cleanup and deduplication, mostly 2015 and earlier
          files renamed according to metadata, white border for addon-2018 replaced with black one
 
 **Metadata:**
