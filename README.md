@@ -3,7 +3,7 @@
 - состоит из мета-данных (ссылок на booru-первоисточник, смысловых тегов, статистических показателей,
   результатов применения алгоритмов на изображениях) и thumbnail-изображений 512x512px
 - содержит описание используемых методов, скриптов, программ и их параметров для единообразного применения
-- большие наборы распространяются через torrent, код, описание и компактные данные хостятся на Github
+- большие наборы изображений распространяются [через torrent](https://github.com/aperveyev/booru_processor/blob/master/%23DATA/readme.md), код, описание и компактные данные хостятся на Github
 
 **ЦЕЛИ ПРОЕКТА:**
 - быть основой для применения Machine Learning & Neural Networks алгоритмов к не-фотографическим изображениям (их "иконкам"), например
@@ -41,19 +41,21 @@
 - простой листинг метаданных [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/)
 - преобразования, в т.ч. весьма нетривиальные и статистики [ImageMagick](https://imagemagick.org/script/download.php)
 - скриптовый "клей" для процессинга и скачивания с кучей готовых библиотек [Python 3.8](https://www.python.org/)
-- файловый менеджер **Far** = восхитительный инструмент в умелых руках
+- файловый менеджер [**Far**](https://www.farmanager.com) восхитительный инструмент в умелых руках
 
 **ДАТАСЕТЫ, СЕРВИСЫ И МОДЕЛИ:**
-- сервис: первоисточник хайпа https://www.thiswaifudoesnotexist.net/
+- модели: определение анимешных лиц https://github.com/nagadomi/animeface-2009 и https://github.com/nagadomi/lbpcascade_animeface
+- модель: детектирование некоторых неприличных объектов и их цензура https://github.com/bedapudi6788/NudeNet
 - сервис: попытка определить теги для произвольной картинки http://kanotype.iptime.org:8003/deepdanbooru/
 - фундаментальные статьи с массой полезных ссылок https://www.gwern.net/Danbooru2018 и https://www.gwern.net/TWDNE
 - полезная всячина с Kaggle (списком) https://www.kaggle.com/datasets?search=anime меня особо заинтересовали метаданные 
   MyAnimeList и Safebooru
-- torrent-ы с "иконками" и метаданными, [описаны отдельно](https://github.com/aperveyev/booru_processor/blob/master/%23DATA/readme.md)  
+- сервис: первоисточник хайпа с генеративной нейронной сетью https://www.thiswaifudoesnotexist.net/
+- **torrent-ы с "иконками" и метаданными**, а также изображениями исходных размеров [описаны отдельно](https://github.com/aperveyev/booru_processor/blob/master/%23DATA/readme.md)  
 
-**МЕТОДИКА ОБРАБОТКИ:**
+**МЕТОДИКА ОБРАБОТКИ в подробностях [описана отдельно](https://github.com/aperveyev/booru_processor/blob/master/preparations.md)**
 - сбор (скачивание) и накопление оригинальных изображений для очередного *релиза*
 - начальная обработка и итеративное улучшение *релиза* в т.ч. с помощью анализа атипичных метаданных
 - слияние *текущего релиза* с *пулом предыдущих релизов*
 
-В подробностях [описана отдельно](https://github.com/aperveyev/booru_processor/blob/master/preparations.md)
+
