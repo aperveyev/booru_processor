@@ -1,20 +1,20 @@
 ### Datasets and software for Booru (painted or CG characters, mostly anime style) image processing
 
 Here is a hobbie project inspired by results of [TWNDE](https://www.thiswaifudoesnotexist.net/), it's technical background
-[by Gwern](https://www.gwern.net/TWDNE) and [his dataset](https://www.gwern.net/Danbooru2018) and also algorithms and software available for free use.
+[by Gwern](https://www.gwern.net/TWDNE) and [his datasets](https://www.gwern.net/Danbooru2018) and also algorithms and software available for free use.
 
 **This activity goals are:**
 * to arrange available metadata, software, scripts and models for the subject
 * to collect (and create) training image datasets ("thumbnails") with good quality and metadata background
+  - go one step beyond [Nagadomi faces](https://github.com/nagadomi/lbpcascade_animeface) and detect portraits ("heads") the same way 
 * an attempt to build usable tools for imagesets & metadata analysis and processing, e.g.
   - scene composition classification
   - visual attractiveness estimation
-  - auto correction ?
 
 [This release](https://nyaa.si/view/1206322 ) is my open dataset made in line with [Danbooru 2018 set](https://nyaa.si/view/1176129)
 It covers 1.227.622 thumbnail (512x512px images) from several imageboards combined with supporting metadata.
 
-**The main features there are:**
+**The main features here over Danbooru are:**
 - much higher original images technical and visual quality 
   * width>=900 height>=900 MPixels>=1.2
   * most of comixes, primitives, overtexted images manually excluded
