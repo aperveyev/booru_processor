@@ -27,14 +27,14 @@ inspired by [by Gwern danbooru portraits](https://www.gwern.net/Crops#danbooru20
    * change extension policy after face detection : down 0% up 30% sides 15% each
    * play with image rotation and detection thresholds over every image till first success
    * don't limit youself with single-character pictures   
-   * ENORMOUS AMOUNT OF MANUAL POSTPROCESSING (filtering) to assure output quality   
+   * ENORMOUS AMOUNT OF MANUAL POSTPROCESSING (filtering) REQUIRED to assure output quality   
    * use only Portraits initially over 200px and extend them (with Waifu2x) to 1024x1024
 - wanna build 200k+ high quality traning dataset for Nagadomi-like cascade XML-s
-   * use BOORU_CHARS (multiBOORU) original images from several torrents, tagged with copyright and characters
-   * informative image files naming, collect supporting metadata
+   * use [original BOORU_CHARS](https://nyaa.si/view/1206322) images from several references torrents, tagged with copyright and characters
+   * support informative image files naming, collect additional metadata
    * now not sure whether to start with outstanding copyrights (with limited characters) or chronologically covering all characters
    * when no success (no good model can be created over this dataset) - no efforts in this direction will be reasonable
  
- BTW Gwern's Figures seemed not usable because of poor AniGeg detection and domination of Figure in most images
+ BTW [Gwern's Figures](https://www.gwern.net/Crops#danbooru2019-figures) seemed not usable because of poor AniGeg detection and domination of Figure in most images
    * one more reason to buld something like Nagadomi rather than AniSeg
    
