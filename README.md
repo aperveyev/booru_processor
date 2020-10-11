@@ -55,17 +55,27 @@
 
 **Размышления о постановке задачи, другие датасеты, модели и сервисы:**
 
+Задача распозначания рисованных персонажей на данный момент (конец 2020) удовлетворительного решения не имеет. 
+На то есть объективные причины (кардинальное отличие от задачи распознавания объектов реального мира) и, по моему мнению, 
+большинство усилий по ее решению тратятся впустую. Подроблее о моем видении ситуации [в лонгриде](https://github.com/aperveyev/booru_processor/about_task.md)
+
+До относительно недавнего времени (примерно 2019) возня с распознаванием рисунков была в основном уделом энтузиастов
+- фундаментальная статья с массой полезных ссылок https://www.gwern.net/Danbooru2019
+и немногие достигнутые результаты стали "хрестоматийными"
+- определение анимешных лиц by Nagadomi https://github.com/nagadomi/lbpcascade_animeface и https://github.com/nagadomi/animeface-2009
+- генеративная модель по созданию новых мордашек https://www.thiswaifudoesnotexist.net/ на основе комбинирования существующих by Gwern Branwen https://www.gwern.net/TWDNE
+
+Затем важность задачи почувствовала индустрия (игровая, но и анимешная тоже) и в нее пришли некоторые деньги,
+
 - примерно как
-    - с лицами у [nagadomi](https://github.com/nagadomi/lbpcascade_animeface) 
     - нецензурщиной [NudeNet](https://github.com/bedapudi6788/NudeNet) хотя для меня она out of scope
     - гуманоидными фигурами [full_body, upper_body](https://github.com/jerryli27/AniSeg) увы, у меня не заработали
     
-- модели: определение анимешных лиц https://github.com/nagadomi/animeface-2009 и https://github.com/nagadomi/lbpcascade_animeface
 - модель: детектирование некоторых неприличных объектов и их цензура https://github.com/bedapudi6788/NudeNet
 - сервис: попытка определить теги для произвольной картинки http://kanotype.iptime.org:8003/deepdanbooru/
-- фундаментальные статьи с массой полезных ссылок https://www.gwern.net/Danbooru2018 и https://www.gwern.net/TWDNE
+
 - полезная всячина с Kaggle (списком) https://www.kaggle.com/datasets?search=anime меня особо заинтересовали метаданные 
   MyAnimeList и Safebooru
-- сервис: первоисточник хайпа с генеративной нейронной сетью https://www.thiswaifudoesnotexist.net/
+
 
 
