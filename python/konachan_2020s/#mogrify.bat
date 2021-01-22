@@ -1,0 +1,1 @@
+magick mogrify -path "OUT" -filter Triangle -define filter:support=2 -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 92 -define jpeg:fancy-upsampling=off -interlace none -colorspace sRGB -format jpg "IN\*.jpg"

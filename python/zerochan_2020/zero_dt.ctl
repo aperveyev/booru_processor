@@ -1,0 +1,9 @@
+LOAD DATA
+APPEND
+INTO TABLE zero_dt
+FIELDS TERMINATED BY '\t'
+(
+id,
+tcat,
+tag
+)
