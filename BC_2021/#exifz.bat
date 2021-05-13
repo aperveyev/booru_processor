@@ -1,0 +1,25 @@
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2015.7x10    > #exifz_V2015.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2015.7x10#   > #exifz_V2015.7x10#.csv
+exit
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2016.7x10    > #exifz_V2016.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2016.7x10#   > #exifz_V2016.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10    > #exifz_V2018.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10#   > #exifz_V2018.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10s   > #exifz_V2018.7x10s.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10s#  > #exifz_V2018.7x10s#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10t   > #exifz_V2018.7x10t.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10z   > #exifz_V2018.7x10z.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2018.7x10z#  > #exifz_V2018.7x10z#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2019.7x10    > #exifz_V2019.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2019.7x10#   > #exifz_V2019.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020A.7x10   > #exifz_V2020A.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020A.7x10#  > #exifz_V2020A.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020B.7x10   > #exifz_V2020B.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020B.7x10#  > #exifz_V2020B.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020C.7x10   > #exifz_V2020C.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020C.7x10#  > #exifz_V2020C.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020D.7x10   > #exifz_V2020D.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2020D.7x10#  > #exifz_V2020D.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2021A.7x10   > #exifz_V2021A.7x10.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2021A.7x10#  > #exifz_V2021A.7x10#.csv
+exiftool -filecreatedate -imagesize -filesize# -filetype -JPEGQualityEstimate -csv -r B:\BCT\V2021A.7x10_  > #exifz_V2021A.7x10_.csv

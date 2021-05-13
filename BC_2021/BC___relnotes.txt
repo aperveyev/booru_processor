@@ -1,0 +1,61 @@
+BOORU CHARS - миниатюры 1280 px и метаданые Safebooru и других имиджборд
+
+BOORU CHARS OPEN DATASET - попытка сконцентрировать и систематизировать общедоступный персонажный anime/CG/game арт
+в локализованном виде, подходящем и для автоматизированной обработки и для визуальной оценки (ня !).
+Помимо картинок в разумном (компромиссном) качестве датасет содержит информацию о тегах (формальных описательных
+признаках содержимого) и некоторых технических и статистических характеристиках изображений.
+
+Данная версия BOORU CHARS состоит из :
+- основного массива из 1593429 sample-файлов изображений
+* JPG, уменьшены до 1280px по длинной стороне (1024px для пропорции 1х1)
+* сгруппированы в 18 томов-папок по соотношению сторон и хронологии
+* разбиты в архивы по 1000 шт на основе подобия статистических характеристик
+* файлы информативно именованы %website% - %id% - %copyright% ~ %characters% (%artist%)
+* более полный вариант %copyright%, %characters% и %artist% занесен в EXIF-информацию 
+- нескольких текстовых tab-separated файлов с метаданными
+* информация о постах релиза (sample, оригинальных, метаданные с имиджборд) 1.593.429 строк
+* информация о тегах (насколько удалось - упорядоченная) 35.222.997 строк
+* листинг 32 торрент-релизов (3.839.005 изображений, почти 5 ТБ), легших в основу датасета
+- пример использования части датасета для детектирования "фрагментов тел" и "сборки" из них персонажей
+* результаты работы детектора (notAI-tech NudeNet) на 2-х томах и собранные (алгоритм - мой) скелетоны
+* около 4000 примеров визуализаций некоторых интересных обнаружений и сборок
+- нескольких довольно развесистых описаний для вышеупомянутого
+* readme_RU/EN.txt в том числе с фрагментами программного кода
+* несколько электронных табличек с примерами анализа метаданных, включая использованные SQL-запросы
+* на Git https://github.com/aperveyev/booru_processor материалов больше и они обновляются
+
+Релиз развивает набор 2-летней давности https://rutracker.org/forum/viewtopic.php?t=5825224
+с описанием которого (при наличии интереса) также весьма невредно ознакомиться.
+
+Идентичный релиз (планируется) раздается на буржуйском nyaa.
+
+Если хоть кто то предпочтет хранение и раздачу этого полутерабайта майнингу chia coin - значит мой напрасный труд не пропал даром.
+
+*****************************************************************************************************************
+
+BOORU CHARS dataset 2021 (Safebooru yande-re etc) 1280 px samples + metadata 
+
+BOORU CHARS OPEN DATASET is an attempt to consolidate and arrange available character-centric anime/CG/game art. 
+It uses a localized format suited both for batch processing and visual estimation and contains JPG sample images
+with reasonable quality and also tag and technical metadata.
+
+This release of BOORU CHARS consist of :
+- 1593429 sample images, mogrified to 1280px (1024px for 1х1)
+* grouped into 18 volumes (directories) by aspect ratio and year
+* zipped by 1000 images according to statistics similarity
+* with verbose file naming "%website% - %id% - %copyright% ~ %characters% (%artist%)" and also with some tags in EXIF
+- several tab-separated texts with metadata
+* post/image info (for samples, ogiginals and from imfgeboard) 1.593.429 rows
+* collected tag info with some addons 35.222.997 rows
+* listing for 32 torrents total with 3.839.005 pictures (almost 5 ТБ) which brought dataset to reality
+- an example of dataset usage for body parts detection and character assembling
+* detector (notAI-tech NudeNet) results for 2 volumes and output compositions (DIY)
+* ~4000 more or less interesting visualisations
+- some descriptive insights into above
+* readme_RU/EN with code examples 
+* several zipped Excels with analytic results and SQL-s
+* more and improved info at https://github.com/aperveyev/booru_processor (mostly russian)
+
+Earlier version of this dataset (2019, 512px) https://nyaa.si/view/1206322 
+
+I want to believe that this half-terabyte of data worth more than chia coin mining.
