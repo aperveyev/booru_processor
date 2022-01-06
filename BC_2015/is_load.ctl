@@ -1,0 +1,8 @@
+LOAD DATA
+APPEND
+INTO TABLE bc_is
+FIELDS TERMINATED BY '\t'
+(
+FNAME char(300),
+rol
+)

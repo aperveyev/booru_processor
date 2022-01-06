@@ -1,0 +1,14 @@
+LOAD DATA
+APPEND
+INTO TABLE yolobo
+FIELDS TERMINATED BY ';' OPTIONALLY ENCLOSED BY '"'
+(
+FNAME,
+PROB,
+OBJ,
+X,
+Y,
+W,
+H,
+batch_id constant 'SS'
+)
